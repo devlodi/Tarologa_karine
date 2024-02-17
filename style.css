@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Impede rolagem devido ao efeito de partículas */
+        background-color: #000; /* Define um fundo escuro */
+
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Mantém o fundo atrás do conteúdo */
+}
+
+.content {
+    position: relative;
+    z-index: 1; /* Garante que o conteúdo fique acima do fundo de partículas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+  background-image: url('header-background.jpg'); /* Adicione o caminho correto para a sua imagem */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Muda a cor do texto para branco ou outra cor clara */
+  text-align: center;
+  padding: 40px 20px; /* Ajusta o preenchimento conforme necessário */
+}
+
+.header h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  animation: fadeIn 2s ease-out 1;
+}
+
+/* Adicionando animação apenas ao text-shadow */
+@keyframes blueGlow {
+  0%, 100% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 15px #007bff, 0 0 20px #007bff;
+  }
+  50% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 25px #007bff, 0 0 30px #007bff;
+  }
+}
+
+/* Aplicando a animação blueGlow após o fadeIn */
+.header h1 {
+  animation: fadeIn 2s ease-out 1, blueGlow 5s infinite alternate ease-in-out;
+}
+
+
+
+/* Adicionando keyframes para animação fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translatey(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-button {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    /* Adicionando box-shadow para efeito de brilho */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+
+
+
+.social-button i {
+    margin-right: 8px;
+}
+
+.whatsapp { background-color: #25d366; }
+.youtube { background-color: #ff0000; }
+.tiktok { background-color: #000; }
+.facebook { background-color: #3b5998; }
