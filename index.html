@@ -14,17 +14,32 @@
         font-family: 'Nunito', sans-serif;
         background-color: #5a0a15; /* Adjust the background color as needed */
     }
-    .profile-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .top-container {
+        position: relative; /* Use relative positioning */
+        text-align: center;
         margin-bottom: 20px;
     }
     .profile-pic {
-        width: 150px; /* Adjust size as needed */
-        height: 150px;
+        width: 200px; /* Adjust size as needed */
+        height: 200px;
         border-radius: 50%;
         object-fit: cover;
+        border: 2px solid #fbe9d1; /* Adjust border color as needed */
+    }
+    .flower {
+        position: absolute; /* Use absolute positioning for flowers */
+        width: 220px; /* Adjust size as needed */
+        height: auto;
+    }
+    .flower-left {
+        top: 35%;
+        left: -1px; /* Adjust position as needed */
+        transform: translate(-50%, -50%);
+    }
+    .flower-right {
+        top: 35%;
+        right: -1px;
+        transform: translate(50%, -50%);
     }
     .button-container {
         text-align: center;
@@ -52,9 +67,12 @@
 </head>
 <body>
 
-<div class="profile-container">
+<div class="top-container">
     <img src="https://raw.githubusercontent.com/devlodi/Tarologa_karine/main/pic_karine.webp" alt="Profile Picture" class="profile-pic">
+    <img src="https://raw.githubusercontent.com/devlodi/Tarologa_karine/main/flore-up-left.webp" alt="Flower Left" class="flower flower-left">
+    <img src="https://raw.githubusercontent.com/devlodi/Tarologa_karine/main/flore-up-right.webp" alt="Flower Right" class="flower flower-right">
 </div>
+
 
 <div class="button-container">
 
